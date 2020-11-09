@@ -4,9 +4,6 @@
 //
 
 import SwiftUI
-#if !os(macOS)
-import UIKit
-#endif
 
 struct FakeNavigationBar: View {
     @EnvironmentObject private var viewModel: CustomNavigationViewModel
