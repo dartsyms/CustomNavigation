@@ -13,7 +13,7 @@ public struct NavPushButton_Previews: PreviewProvider {
     }
 }
 
-struct NavPushButton<Label: View, Destination: View>: View {
+public struct NavPushButton<Label: View, Destination: View>: View {
     @EnvironmentObject private var viewModel: CustomNavigationViewModel
     
     private var label: Label
