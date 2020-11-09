@@ -6,7 +6,7 @@
 import SwiftUI
 import Combine
 
-struct Screen: Identifiable, Equatable {
+public struct Screen: Identifiable, Equatable {
     let id: String
     let next: AnyView
     
@@ -15,20 +15,20 @@ struct Screen: Identifiable, Equatable {
     }
 }
 
-enum CustomTransition {
+public enum CustomTransition {
     case none
     case custom(AnyTransition, AnyTransition)
 }
 
-enum CustomNavigationType {
+public enum CustomNavigationType {
     case push, pop
 }
 
-enum PopDestination {
+public enum PopDestination {
     case prev, root
 }
 
-final class CustomNavigationViewModel: ObservableObject {
+public final class CustomNavigationViewModel: ObservableObject {
     @Published var currentScreen: Screen?
     private struct ScreenStack {
         private var screens = [Screen]()

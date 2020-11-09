@@ -5,7 +5,7 @@
 
 import SwiftUI
 
-struct FakeNavigationBar: View {
+public struct FakeNavigationBar: View {
     @EnvironmentObject private var viewModel: CustomNavigationViewModel
     
     let label: String

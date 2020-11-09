@@ -6,7 +6,7 @@
 import SwiftUI
 import Combine
 
-struct CustomNavigationView<Content: View>: View {
+public struct CustomNavigationView<Content: View>: View {
     @ObservedObject private var viewModel: CustomNavigationViewModel
     
     private let content: Content

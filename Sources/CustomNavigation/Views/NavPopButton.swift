@@ -5,7 +5,7 @@
 
 import SwiftUI
 
-struct NavPopButton<Label: View>: View {
+public struct NavPopButton<Label: View>: View {
     @EnvironmentObject private var viewModel: CustomNavigationViewModel
     
     private var label: Label

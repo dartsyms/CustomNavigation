@@ -6,19 +6,19 @@
 import Foundation
 import SwiftUI
 
-extension UIApplication {
+public extension UIApplication {
     var keyWindowInConnectedScenes: UIWindow? {
         return windows.first { $0.isKeyWindow }
     }
 }
 
-extension UIDevice {
+public extension UIDevice {
     var hasNotch: Bool {
         return UIApplication.shared.keyWindowInConnectedScenes?.safeAreaInsets.bottom ?? 0 > 0
     }
 }
 
-extension AnyTransition {
+public extension AnyTransition {
     static var moveAndFade: AnyTransition {
         let insertion = AnyTransition.move(edge: .leading).combined(with: opacity)
         let removal = AnyTransition.slide.combined(with: opacity)

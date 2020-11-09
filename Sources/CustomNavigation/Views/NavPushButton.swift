@@ -5,7 +5,7 @@
 
 import SwiftUI
 
-struct NavPushButton_Previews: PreviewProvider {
+public struct NavPushButton_Previews: PreviewProvider {
     static var previews: some View {
         NavPushButton(destination: EmptyView()) {
             Text("More...")
