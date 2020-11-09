@@ -10,7 +10,7 @@ public struct FakeNavigationBar: View {
     
     let label: String
     
-    var body: some View {
+    public var body: some View {
         ZStack {
             HStack {
                 if viewModel.currentScreen != nil {

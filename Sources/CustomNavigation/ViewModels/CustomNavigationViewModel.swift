@@ -7,10 +7,10 @@ import SwiftUI
 import Combine
 
 public struct Screen: Identifiable, Equatable {
-    let id: String
-    let next: AnyView
+    public let id: String
+    public let next: AnyView
     
-    static func == (lhs: Screen, rhs: Screen) -> Bool {
+    public static func == (lhs: Screen, rhs: Screen) -> Bool {
         lhs.id == rhs.id
     }
 }
@@ -52,7 +52,7 @@ public final class CustomNavigationViewModel: ObservableObject {
     }
     
     private let easing: Animation
-    var navigationType = CustomNavigationType.push
+    public var navigationType = CustomNavigationType.push
     
     private var screenStack = ScreenStack() {
         didSet {
@@ -64,7 +64,7 @@ public final class CustomNavigationViewModel: ObservableObject {
         self.easing = easing
     }
     
-    func push<S: View>(_ screenView: S) {
+    public func push<S: View>(_ screenView: S) {
         withAnimation(easing) {
             navigationType = .push
             let screen = Screen(id: UUID().uuidString, next: AnyView(screenView))
@@ -72,7 +72,7 @@ public final class CustomNavigationViewModel: ObservableObject {
         }
     }
     
-    func pop(to: PopDestination = .prev) {
+    public func pop(to: PopDestination = .prev) {
         withAnimation(easing) {
             navigationType = .pop
             switch to {

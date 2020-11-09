@@ -6,7 +6,7 @@
 import SwiftUI
 
 public struct NavPushButton_Previews: PreviewProvider {
-    static var previews: some View {
+    public static var previews: some View {
         NavPushButton(destination: EmptyView()) {
             Text("More...")
         }
@@ -24,7 +24,7 @@ struct NavPushButton<Label: View, Destination: View>: View {
         self.label = label()
     }
     
-    var body: some View {
+    public var body: some View {
         HStack {
             label
             Image(systemName: "chevron.right")

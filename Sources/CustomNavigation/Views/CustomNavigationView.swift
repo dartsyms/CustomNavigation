@@ -23,7 +23,7 @@ public struct CustomNavigationView<Content: View>: View {
         }
     }
     
-    var body: some View {
+    public var body: some View {
         let isRoot = viewModel.currentScreen == nil
         return ZStack {
             if isRoot {

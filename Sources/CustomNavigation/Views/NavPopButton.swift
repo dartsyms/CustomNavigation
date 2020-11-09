@@ -16,7 +16,7 @@ public struct NavPopButton<Label: View>: View {
         self.label = label()
     }
     
-    var body: some View {
+    publincvar body: some View {
         HStack {
             Image(systemName: "chevron.left")
             label
@@ -26,8 +26,8 @@ public struct NavPopButton<Label: View>: View {
     }
 }
 
-struct NavPopButton_Previews: PreviewProvider {
-    static var previews: some View {
+public struct NavPopButton_Previews: PreviewProvider {
+    public static var previews: some View {
         NavPopButton(destination: .prev) {
             Text("Back")
         }
