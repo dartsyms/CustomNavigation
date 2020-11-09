@@ -10,7 +10,9 @@ public struct FakeNavigationBar: View {
     
     let label: String
     
-    public init() {}
+    public init(_ label: String) {
+        self.label = label
+    }
     
     public var body: some View {
         ZStack {
