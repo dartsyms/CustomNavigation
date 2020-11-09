@@ -16,7 +16,7 @@ public struct NavPopButton<Label: View>: View {
         self.label = label()
     }
     
-    publincvar body: some View {
+    public var body: some View {
         HStack {
             Image(systemName: "chevron.left")
             label
