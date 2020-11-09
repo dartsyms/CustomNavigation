@@ -11,7 +11,7 @@ public struct NavPopButton<Label: View>: View {
     private var label: Label
     private var destination: PopDestination
     
-    init(destination: PopDestination, @ViewBuilder label: @escaping () -> Label) {
+    public init(destination: PopDestination, @ViewBuilder label: @escaping () -> Label) {
         self.destination = destination
         self.label = label()
     }

@@ -12,7 +12,7 @@ public struct CustomNavigationView<Content: View>: View {
     private let content: Content
     private let transition: (push: AnyTransition, pop: AnyTransition)
     
-    init(transition: CustomTransition, easing: Animation = .easeOut(duration: 0.3), @ViewBuilder content: @escaping () -> Content) {
+    public init(transition: CustomTransition, easing: Animation = .easeOut(duration: 0.3), @ViewBuilder content: @escaping () -> Content) {
         self.viewModel = CustomNavigationViewModel(easing: easing)
         self.content = content()
         switch transition {

@@ -19,7 +19,7 @@ struct NavPushButton<Label: View, Destination: View>: View {
     private var label: Label
     private var destination: Destination
     
-    init(destination: Destination, @ViewBuilder label: @escaping () -> Label) {
+    public init(destination: Destination, @ViewBuilder label: @escaping () -> Label) {
         self.destination = destination
         self.label = label()
     }
