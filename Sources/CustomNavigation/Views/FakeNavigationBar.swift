@@ -10,6 +10,8 @@ public struct FakeNavigationBar: View {
     
     let label: String
     
+    public init() {}
+    
     public var body: some View {
         ZStack {
             HStack {
@@ -34,7 +36,7 @@ public struct FakeNavigationBar: View {
         }
     }
     
-    var backView: some View {
+    public var backView: some View {
         ZStack {
             Rectangle()
                 .foregroundColor(.gray)
